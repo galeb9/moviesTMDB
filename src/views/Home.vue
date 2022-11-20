@@ -1,7 +1,7 @@
 <template>
-    <div class="home">
-      <h1 class="popular-movies__heading">Popular Movies</h1>
-      <div class="popular-movies">
+    <div class="home__container">
+      <h1 class="home__heading">Popular Movies</h1>
+      <div class="home">
         <Sidebar :genres="genres" @search="searchByGenre" />
         <MovieList :movies="movies" @loadMore="loadMore" @handle-scroll="handleScroll"/>
       </div>
@@ -79,5 +79,22 @@ export default {
 </script>
 
 <style lang="scss"> 
-
+  .home__container{
+    .home__heading {
+      margin-bottom: 16px;
+    }
+    .home {
+      display: flex;
+      gap: 30px;
+ 
+    }
+    @media only screen and (max-width: 758px ) {
+      .home {
+        flex-direction: column;
+      }
+      .home__heading {
+        font-size: 26px;
+      }
+    }
+  }
 </style>

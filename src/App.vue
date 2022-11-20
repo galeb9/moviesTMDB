@@ -30,13 +30,6 @@ export default {
         border: 1px solid $lightGrey;
         border-radius: $radius;
     }
-    .popular-movies__heading {
-      margin-bottom: 16px;
-    }
-    .popular-movies {
-      display: flex;
-      gap: 30px;
-    }
   }
 }
 

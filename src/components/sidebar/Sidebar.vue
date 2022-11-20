@@ -42,7 +42,6 @@ export default {
   .sidebar {
     flex-basis: 20%;
     min-width: 260px;
-
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -59,6 +58,9 @@ export default {
       background: $lightGrey;
       color: $darkGrey;
       cursor: default;
+    }
+    @media only screen and (max-width: 470px) { 
+      min-width: 180px;
     }
   }
 </style>

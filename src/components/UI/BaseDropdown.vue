@@ -31,7 +31,6 @@ export default {
 
 <style lang='scss'>
     .base-dropdown {
-
         .base-dropdown__header {
             padding: 14px 16px;
             display: flex;

@@ -42,6 +42,11 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 30px 2.5%;
+    @media only screen and (max-width: 470px) { 
+      align-items: center;
+      justify-content: center;
+    }
+
   }
   .movies__btn {
     background-color: $primary;

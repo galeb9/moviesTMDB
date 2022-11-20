@@ -41,7 +41,13 @@ export default {
     @media only screen and (max-width: 1390px) { flex-basis: 23% }
     @media only screen and (max-width: 1168px) { flex-basis: 31.5% }
     @media only screen and (max-width: 958px) { flex-basis: 48% }
-    @media only screen and (max-width: 759px) { flex-basis: 100% }
+    @media only screen and (max-width: 758px) { flex-basis: 31.5% }
+    @media only screen and (max-width: 668px) { flex-basis: 48% }
+    @media only screen and (max-width: 470px) { 
+      flex-basis: 100%;
+      max-width: 250px ;
+    }
+
     .movies-item__img {
       height: 72%;
       border-radius: $radius $radius 0 0;
