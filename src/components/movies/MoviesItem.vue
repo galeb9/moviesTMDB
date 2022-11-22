@@ -15,8 +15,13 @@
 </template>
 
 <script>
+import BaseProgress from '@/components/UI/BaseProgress'
+
 export default {
   name: "MovieItem",
+  components: {
+    BaseProgress
+  },
   props: { 
     movie: { type: Object, default: () => {} }
   },
@@ -37,7 +42,7 @@ export default {
     min-width: 180px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
+    // padding-bottom: 10px;
     @media only screen and (max-width: 1390px) { flex-basis: 23% }
     @media only screen and (max-width: 1168px) { flex-basis: 31.5% }
     @media only screen and (max-width: 958px) { flex-basis: 48% }

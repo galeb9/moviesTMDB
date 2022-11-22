@@ -8,11 +8,13 @@
 
 <script>
 import Genres from './Genres.vue'
+import BaseDropdown from '@/components/UI/BaseDropdown'
 
 export default {
   name: 'Filters',
   components: {
-    Genres
+    Genres,
+    BaseDropdown
   },
   props: {
     genres: { type: Array, default: () => [] }
