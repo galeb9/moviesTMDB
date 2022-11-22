@@ -1,6 +1,6 @@
 <template>
 <div class="base-progress">
-    <div class="circle" ref="roundStats" :style="{ width: size + 'px', height: size + 'px'}">
+    <div class="circle" ref="roundStats" :style="{ width: size + 'px', height: size + 'px', backgroundImage: color}">
         <div class="inner">
             <slot>
                 <div class="inner__container">
@@ -23,13 +23,10 @@ export default {
     mounted () {
         if(this.progress > 0) this.chooseColor()
     },
-    methods: {
-        chooseColor () {
-            let activeColor = ""
-            if(this.progress > 73) activeColor ="33, 208, 122"
-            else if(this.progress > 50) activeColor = "210, 213, 49"
-            else activeColor = "216, 35, 95"
-            this.$refs.roundStats.style.backgroundImage = `conic-gradient(rgb(${activeColor}) ${this.progress}%, rgba(${activeColor}, 0.250) 0)`
+    computed: {
+        color() {
+            let activeColor = this.progress > 73 ? "33, 208, 122" : (this.progress > 50  ?  "210, 213, 49" : "216, 35, 95")
+            return `conic-gradient(rgb(${activeColor}) ${this.progress}%, rgba(${activeColor}, 0.250) 0)`
         }
     }
 }
