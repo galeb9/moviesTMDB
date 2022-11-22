@@ -45,33 +45,32 @@ export default {
         border-radius: 50%;
         background: rgba(41, 65, 47, 0.486);
         overflow: hidden;
-    }
-    .circle .inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 85%;
-        height: 85%;
-        background: #000;
-        border-radius: 50%;
-        font-weight: 300;
-        color: white;
-        padding: 10px;
-        .inner__container {
+        .inner {
             display: flex;
-            .inner__number {
-                font-size: 15px;
-            }
-            .inner__icon {
-                font-size: 7px;
-                margin-top: 3px;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+            height: 85%;
+            background: #000;
+            border-radius: 50%;
+            font-weight: 300;
+            color: white;
+            padding: 10px;
+            &__container {
+                display: flex;
+                .inner__number {
+                    font-size: 15px;
+                }
+                .inner__icon {
+                    font-size: 7px;
+                    margin-top: 3px;
+                }
             }
         }
-
     }
 }
    
